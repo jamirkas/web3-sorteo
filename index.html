@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Lottery – Good Vibes Only</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'web3-purple': '#8B5CF6',
+                        'web3-blue': '#3B82F6',
+                        'web3-cyan': '#06B6D4',
+                        'web3-dark': '#0F0F23',
+                        'web3-gray': '#1A1A2E',
+                    },
+                    fontFamily: {
+                        'mono': ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 6s ease infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #0F0F23, #1A1A2E, #8B5CF6, #3B82F6);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-web3-dark text-white font-mono overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-effect">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-web3-purple to-web3-cyan rounded-full animate-pulse"></div>
+                    <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-web3-purple to-web3-cyan bg-clip-text text-transparent">
+                        Web3 Lottery
+                    </h1>
+                </div>
+                <button class="bg-gradient-to-r from-web3-purple to-web3-blue hover:from-web3-blue hover:to-web3-cyan px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 neon-glow">
+                    Connect Wallet
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-web3-purple rounded-full blur-xl animate-float"></div>
+            <div class="absolute top-40 right-20 w-32 h-32 bg-web3-cyan rounded-full blur-xl animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/3 w-24 h-24 bg-web3-blue rounded-full blur-xl animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-web3-cyan to-web3-purple bg-clip-text text-transparent animate-pulse">
+                    Good Vibes Only
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
+                    Децентрализованная лотерея и raffle с трежери, токеномикой и NFT
+                </p>
+                <p class="text-lg md:text-xl mb-12 text-gray-400 max-w-2xl mx-auto">
+                    Участвуйте в честных розыгрышах, получайте награды и станьте частью сообщества с позитивной энергией
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-gradient-to-r from-web3-purple to-web3-blue hover:from-web3-blue hover:to-web3-cyan px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 neon-glow">
+                        Начать играть
+                    </button>
+                    <button class="glass-effect hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white border-opacity-20">
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-web3-gray relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-web3-purple to-web3-cyan bg-clip-text text-transparent">
+                    Как это работает
+                </h3>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Простой и прозрачный процесс участия в децентрализованной лотерее
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="glass-effect rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-web3-purple to-web3-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        1
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-web3-cyan">Купить билет</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Приобретите билет лотереи используя криптовалюту. Все транзакции прозрачны и записаны в блокчейне.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="glass-effect rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-web3-blue to-web3-cyan rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        2
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-web3-cyan">Участвовать в раффле</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Ваш билет автоматически участвует в розыгрыше. Чем больше билетов, тем выше шансы на победу.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="glass-effect rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-web3-cyan to-web3-purple rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        3
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-web3-cyan">Получить приз</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Выиграйте главный приз или получите airdrop токенов. Все участники получают что-то ценное!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Genesis NFT Section -->
+    <section class="py-20 bg-web3-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-web3-purple via-transparent to-web3-cyan"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block px-4 py-2 bg-gradient-to-r from-web3-purple to-web3-cyan rounded-full text-sm font-semibold mb-6">
+                    COMING SOON
+                </div>
+                <h3 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-web3-cyan bg-clip-text text-transparent">
+                    Genesis NFT Sale
+                </h3>
+                <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                    Эксклюзивная коллекция Genesis NFT с уникальными преимуществами и доступом к закрытым розыгрышам
+                </p>
+                
+                <div class="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-web3-cyan mb-2">1,000</div>
+                            <div class="text-gray-400">Уникальных NFT</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-web3-purple mb-2">0.1 ETH</div>
+                            <div class="text-gray-400">Стартовая цена</div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4 text-left">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-web3-cyan rounded-full"></div>
+                            <span class="text-gray-300">Приоритетный доступ к лотереям</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-web3-purple rounded-full"></div>
+                            <span class="text-gray-300">Эксклюзивные airdrop'ы токенов</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 bg-web3-blue rounded-full"></div>
+                            <span class="text-gray-300">Участие в управлении проектом</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full mt-8 bg-gradient-to-r from-web3-purple to-web3-blue hover:from-web3-blue hover:to-web3-cyan px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        Уведомить о запуске
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treasury & Tokenomics Section -->
+    <section class="py-20 bg-web3-gray">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block px-4 py-2 bg-gradient-to-r from-web3-blue to-web3-cyan rounded-full text-sm font-semibold mb-6">
+                    SOON
+                </div>
+                <h3 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-web3-blue to-web3-cyan bg-clip-text text-transparent">
+                    Treasury & Tokenomics
+                </h3>
+                <p class="text-xl text-gray-400 mb-12 leading-relaxed">
+                    Прозрачная экономическая модель с устойчивой токеномикой и управляемой сокровищницей
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-effect rounded-2xl p-8">
+                        <h4 class="text-2xl font-bold mb-4 text-web3-blue">Treasury Management</h4>
+                        <p class="text-gray-400 mb-6">
+                            Децентрализованное управление фондами с прозрачным распределением средств между призовым фондом, развитием проекта и сообществом.
+                        </p>
+                        <div class="space-y-3 text-left">
+                            <div class="flex justify-between">
+                                <span class="text-gray-300">Призовой фонд</span>
+                                <span class="text-web3-cyan font-semibold">60%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-300">Развитие</span>
+                                <span class="text-web3-blue font-semibold">25%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-300">Сообщество</span>
+                                <span class="text-web3-purple font-semibold">15%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-effect rounded-2xl p-8">
+                        <h4 class="text-2xl font-bold mb-4 text-web3-cyan">Token Utility</h4>
+                        <p class="text-gray-400 mb-6">
+                            Многофункциональный токен с реальной утилитой: участие в лотереях, стейкинг, управление и эксклюзивные привилегии.
+                        </p>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-web3-cyan rounded-full"></div>
+                                <span class="text-gray-300">Покупка билетов лотереи</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-web3-blue rounded-full"></div>
+                                <span class="text-gray-300">Стейкинг и фарминг</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-web3-purple rounded-full"></div>
+                                <span class="text-gray-300">Голосование в DAO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-web3-dark border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 mb-6">
+                    <div class="w-6 h-6 bg-gradient-to-r from-web3-purple to-web3-cyan rounded-full"></div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-web3-purple to-web3-cyan bg-clip-text text-transparent">
+                        Web3 Lottery
+                    </span>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-8 mb-8 text-gray-400">
+                    <a href="#" class="hover:text-web3-cyan transition-colors">О проекте</a>
+                    <a href="#" class="hover:text-web3-cyan transition-colors">Как играть</a>
+                    <a href="#" class="hover:text-web3-cyan transition-colors">NFT</a>
+                    <a href="#" class="hover:text-web3-cyan transition-colors">Токеномика</a>
+                    <a href="#" class="hover:text-web3-cyan transition-colors">Сообщество</a>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-web3-purple hover:bg-opacity-20 transition-all">
+                        <span class="text-lg">𝕏</span>
+                    </a>
+                    <a href="#" class="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-web3-blue hover:bg-opacity-20 transition-all">
+                        <span class="text-lg">📱</span>
+                    </a>
+                    <a href="#" class="w-10 h-10 glass-effect rounded-full flex items-center justify-center hover:bg-web3-cyan hover:bg-opacity-20 transition-all">
+                        <span class="text-lg">💬</span>
+                    </a>
+                </div>
+                
+                <p class="text-gray-500 text-sm">
+                    © 2025 Web3 Lottery – Good Vibes Only. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

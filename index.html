@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web3 Lottery – Good Vibes Only</title>
+    <meta name="description" content="Децентрализованная лотерея и raffle с трежери, токеномикой и NFT." />
+    <meta name="theme-color" content="#0b1220" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black text-slate-100 antialiased selection:bg-fuchsia-500/30 selection:text-white">
+    <!-- Ambient glow -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div
+        class="absolute -top-32 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 rounded-full blur-3xl"
+        style="background: radial-gradient(closest-side, rgba(99,102,241,0.25), rgba(236,72,153,0.15), transparent 70%);"
+      ></div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/60 backdrop-blur">
+      <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#" class="flex items-center gap-2 text-base font-semibold tracking-tight">
+          <span class="inline-block h-2.5 w-2.5 rounded-full bg-gradient-to-r from-indigo-400 to-fuchsia-500"></span>
+          <span>Web3 Lottery</span>
+          <span class="hidden text-slate-400 sm:inline">— Good Vibes Only</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <a href="#how-it-works" class="transition hover:text-white">Как это работает</a>
+          <a href="#genesis" class="transition hover:text-white">Genesis NFT</a>
+          <a href="#treasury" class="transition hover:text-white">Treasury</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            class="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white shadow-sm ring-1 ring-white/10 transition hover:border-fuchsia-400/40 hover:bg-white/10 hover:ring-fuchsia-400/30 active:scale-[0.99]"
+          >
+            <svg class="h-4 w-4 text-fuchsia-400 transition group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 6h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H7l-4-4V10l4-4z" />
+            </svg>
+            <span>Connect Wallet</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+          <div class="mx-auto max-w-3xl text-center">
+            <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-fuchsia-400"></span>
+              Вибрации только хорошие — on-chain
+            </div>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl">
+              Web3 Lottery
+              <span class="block bg-gradient-to-r from-indigo-400 via-sky-400 to-fuchsia-500 bg-clip-text text-transparent">Good Vibes Only</span>
+            </h1>
+            <p class="mt-6 text-lg leading-relaxed text-slate-300">
+              Децентрализованная лотерея и raffle с трежери, токеномикой и NFT.
+            </p>
+            <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href="#how-it-works"
+                class="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition hover:from-indigo-400 hover:to-fuchsia-400"
+              >
+                Как это работает
+                <svg class="h-4 w-4 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+              <span class="text-sm text-slate-400">Mainnet launch — soon</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how-it-works" class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <h2 class="text-center text-2xl font-semibold tracking-tight sm:text-3xl">Как это работает</h2>
+          <p class="mt-3 text-center text-slate-400">Просто, прозрачно и на смарт‑контрактах.</p>
+
+          <div class="mt-10 grid gap-4 sm:gap-6 md:grid-cols-3">
+            <div class="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-lg shadow-black/20 transition hover:border-fuchsia-400/30 hover:bg-white/[0.06]">
+              <div class="flex items-center justify-between">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/30">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2V15a2 2 0 0 1-2 2H8l-5 3v-3.5z"/>
+                  </svg>
+                </div>
+                <span class="text-xs text-slate-400">Шаг 1</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold">Купить билет</h3>
+              <p class="mt-2 text-sm text-slate-400">Оплата в поддерживаемых токенах. Билеты — on‑chain.</p>
+            </div>
+
+            <div class="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-lg shadow-black/20 transition hover:border-fuchsia-400/30 hover:bg-white/[0.06]">
+              <div class="flex items-center justify-between">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/30">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/>
+                  </svg>
+                </div>
+                <span class="text-xs text-slate-400">Шаг 2</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold">Участвовать в раффле</h3>
+              <p class="mt-2 text-sm text-slate-400">Прозрачный розыгрыш на смарт‑контракте. Никаких централизованных рисков.</p>
+            </div>
+
+            <div class="group rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-lg shadow-black/20 transition hover:border-fuchsia-400/30 hover:bg-white/[0.06]">
+              <div class="flex items-center justify-between">
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/30">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.5l-2-2h-5l-2 2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/>
+                  </svg>
+                </div>
+                <span class="text-xs text-slate-400">Шаг 3</span>
+              </div>
+              <h3 class="mt-4 text-lg font-semibold">Получить приз или airdrop</h3>
+              <p class="mt-2 text-sm text-slate-400">Автоматическая выдача призов/airdrop прямо в ваш кошелёк.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Genesis NFT -->
+      <section id="genesis" class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.02] p-8 text-center shadow-xl shadow-black/30 sm:p-12">
+            <div class="inline-flex items-center gap-2 rounded-full border border-fuchsia-400/30 bg-fuchsia-500/10 px-3 py-1 text-xs font-medium text-fuchsia-200">
+              Genesis NFT
+            </div>
+            <h2 class="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">Genesis NFT Sale — Coming Soon</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-slate-400">Ранняя коллекция с утилитой и доступом к приватным раффлам.</p>
+            <div class="mt-6">
+              <button disabled class="inline-flex cursor-not-allowed items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+                Mint откроется позже
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Treasury & Tokenomics -->
+      <section id="treasury" class="relative">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          <div class="rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-xl shadow-black/30 sm:p-12">
+            <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Treasury & Tokenomics — Soon</h2>
+            <p class="mt-3 max-w-2xl text-slate-400">Публичный трежери, прозрачные поступления и распределение. Токеномика с устойчивыми стимулами для участников.</p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                <p class="text-sm text-slate-300">Трежери‑дашборд</p>
+                <p class="text-xs text-slate-500">Он‑чейн метрики и распределение — скоро.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-black/20 p-5">
+                <p class="text-sm text-slate-300">Токеномика</p>
+                <p class="text-xs text-slate-500">Emission, utility, staking — в разработке.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 py-8 text-center text-sm text-slate-400 sm:px-6 lg:px-8">
+        © 2025 Web3 Lottery – Good Vibes Only
+      </div>
+    </footer>
+  </body>
+</html>
